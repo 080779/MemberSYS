@@ -1,0 +1,3440 @@
+2018-02-11 16:35:46,710 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:35:46 +08:00
+ 关闭了连接
+2018-02-11 16:35:47,717 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:35:47 +08:00
+ 打开了连接
+2018-02-11 16:35:47,717 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:35:47,717 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:35:47,717 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:35:47 +08:00
+ 执行
+2018-02-11 16:35:47,718 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:35:47,718 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:35:47,718 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:35:47 +08:00
+ 关闭了连接
+2018-02-11 16:35:47,719 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:35:47 +08:00
+ 打开了连接
+2018-02-11 16:35:47,719 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:35:47,719 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:35:47,719 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:35:47 +08:00
+ 执行
+2018-02-11 16:35:47,721 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:35:47,722 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:35:47,722 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:35:47 +08:00
+ 关闭了连接
+2018-02-11 16:37:44,751 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:44 +08:00
+ 打开了连接
+2018-02-11 16:37:44,761 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.tb_Address','dbo.tb_Admin','dbo.tb_Role','dbo.tb_Permission','dbo.tb_Agent','dbo.tb_Area','dbo.tb_BankName','dbo.tb_Bonus','dbo.tb_BonusType','dbo.tb_User','dbo.tb_Cashbuy','dbo.tb_Cashcredit','dbo.tb_Cashorder','dbo.tb_CashPoundage','dbo.tb_Cashsell','dbo.tb_Change','dbo.tb_ChangeType','dbo.tb_City','dbo.tb_Country','dbo.tb_CurrencyRate','dbo.tb_GlobeParam','dbo.tb_Goods','dbo.tb_Journal','dbo.tb_CurrencyName','dbo.tb_LeaveMsg','dbo.tb_LeaveReMsg','dbo.tb_Level','dbo.tb_Link','dbo.tb_Message','dbo.tb_News','dbo.tb_Order','dbo.tb_OrderDetail','dbo.tb_Power','dbo.tb_ProduceType','dbo.tb_Province','dbo.tb_Recharge','dbo.tb_Remit','dbo.tb_SalesRoom','dbo.tb_Security','dbo.tb_ServiceQQ','dbo.tb_SetSystem','dbo.tb_SMS','dbo.tb_Stock','dbo.tb_StockBuy','dbo.tb_StockChart','dbo.tb_StockDetail','dbo.tb_StockLssue','dbo.tb_Stockorder','dbo.tb_StockSell','dbo.tb_StockSplit','dbo.tb_StockSplitDetail','dbo.tb_SysLog','dbo.tb_SystemBank','dbo.tb_SystemMoney','dbo.tb_TakeMoney','dbo.tb_UserPro','dbo.tb_UserRecord','dbo.tb_Wealth','dbo.tb_RolePermission','dbo.tb_AdminUserRole')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2018-02-11 16:37:44,762 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:44,762 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:44 +08:00
+ 执行
+2018-02-11 16:37:44,767 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 4 毫秒内完成，结果为: 60
+
+2018-02-11 16:37:44,767 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:44,767 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:44 +08:00
+ 关闭了连接
+2018-02-11 16:37:44,858 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:44 +08:00
+ 打开了连接
+2018-02-11 16:37:45,684 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2018-02-11 16:37:45,684 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:45,685 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: 'Chat.Service.MyDbContext' (Type = String, Size = 4000)
+
+2018-02-11 16:37:45,685 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:45 +08:00
+ 执行
+2018-02-11 16:37:45,687 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内失败，错误为: 对象名 'dbo.__MigrationHistory' 无效。
+
+2018-02-11 16:37:45,687 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:45,688 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:45 +08:00
+ 关闭了连接
+2018-02-11 16:37:45,690 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:45 +08:00
+ 打开了连接
+2018-02-11 16:37:45,691 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+    )  AS [GroupBy1]
+2018-02-11 16:37:45,691 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:45,691 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:45 +08:00
+ 执行
+2018-02-11 16:37:45,692 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内失败，错误为: 对象名 'dbo.__MigrationHistory' 无效。
+
+2018-02-11 16:37:45,692 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:45,692 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:45 +08:00
+ 关闭了连接
+2018-02-11 16:37:45,780 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:45 +08:00
+ 打开了连接
+2018-02-11 16:37:45,973 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:37:45,973 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:45,973 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:45 +08:00
+ 执行
+2018-02-11 16:37:45,974 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:37:45,974 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:45,979 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:45 +08:00
+ 关闭了连接
+2018-02-11 16:37:45,980 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:45 +08:00
+ 打开了连接
+2018-02-11 16:37:46,025 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:37:46,025 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:46,025 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:46 +08:00
+ 执行
+2018-02-11 16:37:46,028 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:37:46,028 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:46,094 [9] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:46 +08:00
+ 关闭了连接
+2018-02-11 16:37:49,808 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:49 +08:00
+ 打开了连接
+2018-02-11 16:37:49,809 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:37:49,809 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:49,809 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:49 +08:00
+ 执行
+2018-02-11 16:37:49,810 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:37:49,810 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:49,810 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:49 +08:00
+ 关闭了连接
+2018-02-11 16:37:49,810 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:49 +08:00
+ 打开了连接
+2018-02-11 16:37:49,812 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:37:49,812 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:49,812 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:49 +08:00
+ 执行
+2018-02-11 16:37:49,815 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:37:49,815 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:49,815 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:49 +08:00
+ 关闭了连接
+2018-02-11 16:37:52,077 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:52 +08:00
+ 打开了连接
+2018-02-11 16:37:52,077 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:37:52,077 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:52,077 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:52 +08:00
+ 执行
+2018-02-11 16:37:52,079 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:37:52,079 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:52,079 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:52 +08:00
+ 关闭了连接
+2018-02-11 16:37:52,079 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:52 +08:00
+ 打开了连接
+2018-02-11 16:37:52,080 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:37:52,080 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:52,081 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:52 +08:00
+ 执行
+2018-02-11 16:37:52,083 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:37:52,083 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:52,083 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:52 +08:00
+ 关闭了连接
+2018-02-11 16:37:54,539 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:54 +08:00
+ 打开了连接
+2018-02-11 16:37:54,540 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:37:54,540 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:54,540 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:54 +08:00
+ 执行
+2018-02-11 16:37:54,541 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:37:54,541 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:54,541 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:54 +08:00
+ 关闭了连接
+2018-02-11 16:37:54,541 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:54 +08:00
+ 打开了连接
+2018-02-11 16:37:54,541 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:37:54,542 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:54,542 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:54 +08:00
+ 执行
+2018-02-11 16:37:54,544 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:37:54,544 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:54,545 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:54 +08:00
+ 关闭了连接
+2018-02-11 16:37:56,910 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:56 +08:00
+ 打开了连接
+2018-02-11 16:37:56,911 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:37:56,911 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:56,911 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:56 +08:00
+ 执行
+2018-02-11 16:37:56,912 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:37:56,912 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:56,912 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:56 +08:00
+ 关闭了连接
+2018-02-11 16:37:56,913 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:56 +08:00
+ 打开了连接
+2018-02-11 16:37:56,913 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:37:56,913 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:56,913 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:56 +08:00
+ 执行
+2018-02-11 16:37:56,916 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:37:56,916 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:56,916 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:56 +08:00
+ 关闭了连接
+2018-02-11 16:37:58,914 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:58 +08:00
+ 打开了连接
+2018-02-11 16:37:58,915 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:37:58,915 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:58,915 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:58 +08:00
+ 执行
+2018-02-11 16:37:58,916 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:37:58,916 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:58,916 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:58 +08:00
+ 关闭了连接
+2018-02-11 16:37:58,916 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:58 +08:00
+ 打开了连接
+2018-02-11 16:37:58,916 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:37:58,917 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:58,917 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:37:58 +08:00
+ 执行
+2018-02-11 16:37:58,919 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:37:58,919 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:37:58,919 [8] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:37:58 +08:00
+ 关闭了连接
+2018-02-11 16:38:00,347 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:00 +08:00
+ 打开了连接
+2018-02-11 16:38:00,347 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:38:00,347 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:00,347 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:38:00 +08:00
+ 执行
+2018-02-11 16:38:00,348 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:38:00,349 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:00,349 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:00 +08:00
+ 关闭了连接
+2018-02-11 16:38:00,349 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:00 +08:00
+ 打开了连接
+2018-02-11 16:38:00,349 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:38:00,349 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:00,349 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:38:00 +08:00
+ 执行
+2018-02-11 16:38:00,352 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:38:00,352 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:00,352 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:00 +08:00
+ 关闭了连接
+2018-02-11 16:38:02,058 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:02 +08:00
+ 打开了连接
+2018-02-11 16:38:02,058 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:38:02,058 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:02,058 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:38:02 +08:00
+ 执行
+2018-02-11 16:38:02,059 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:38:02,059 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:02,059 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:02 +08:00
+ 关闭了连接
+2018-02-11 16:38:02,060 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:02 +08:00
+ 打开了连接
+2018-02-11 16:38:02,060 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:38:02,060 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:02,060 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:38:02 +08:00
+ 执行
+2018-02-11 16:38:02,063 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:38:02,063 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:02,063 [5] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:02 +08:00
+ 关闭了连接
+2018-02-11 16:38:46,969 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:46 +08:00
+ 打开了连接
+2018-02-11 16:38:46,970 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:38:46,970 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:46,970 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:38:46 +08:00
+ 执行
+2018-02-11 16:38:46,971 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:38:46,971 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:46,971 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:46 +08:00
+ 关闭了连接
+2018-02-11 16:38:46,971 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:46 +08:00
+ 打开了连接
+2018-02-11 16:38:46,971 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:38:46,971 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:46,971 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:38:46 +08:00
+ 执行
+2018-02-11 16:38:46,974 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:38:46,974 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:46,974 [6] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:46 +08:00
+ 关闭了连接
+2018-02-11 16:38:49,099 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:49 +08:00
+ 打开了连接
+2018-02-11 16:38:49,099 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:38:49,099 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:49,099 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:38:49 +08:00
+ 执行
+2018-02-11 16:38:49,100 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:38:49,100 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:49,100 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:49 +08:00
+ 关闭了连接
+2018-02-11 16:38:49,100 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:49 +08:00
+ 打开了连接
+2018-02-11 16:38:49,101 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:38:49,101 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:49,101 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:38:49 +08:00
+ 执行
+2018-02-11 16:38:49,103 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:38:49,104 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:38:49,104 [12] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:38:49 +08:00
+ 关闭了连接
+2018-02-11 16:45:35,003 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:35 +08:00
+ 打开了连接
+2018-02-11 16:45:35,003 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:45:35,004 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:35,004 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:45:35 +08:00
+ 执行
+2018-02-11 16:45:35,004 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:45:35,005 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:35,005 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:35 +08:00
+ 关闭了连接
+2018-02-11 16:45:35,005 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:35 +08:00
+ 打开了连接
+2018-02-11 16:45:35,005 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:45:35,006 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:35,006 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:45:35 +08:00
+ 执行
+2018-02-11 16:45:35,008 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:45:35,008 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:35,009 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:35 +08:00
+ 关闭了连接
+2018-02-11 16:45:49,698 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:49 +08:00
+ 打开了连接
+2018-02-11 16:45:49,698 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:45:49,698 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:49,698 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:45:49 +08:00
+ 执行
+2018-02-11 16:45:49,699 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:45:49,699 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:49,699 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:49 +08:00
+ 关闭了连接
+2018-02-11 16:45:49,700 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:49 +08:00
+ 打开了连接
+2018-02-11 16:45:49,700 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:45:49,700 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:49,700 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:45:49 +08:00
+ 执行
+2018-02-11 16:45:49,703 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:45:49,703 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:49,703 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:49 +08:00
+ 关闭了连接
+2018-02-11 16:45:50,962 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:50 +08:00
+ 打开了连接
+2018-02-11 16:45:50,963 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:45:50,963 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:50,963 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:45:50 +08:00
+ 执行
+2018-02-11 16:45:50,964 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:45:50,964 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:50,964 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:50 +08:00
+ 关闭了连接
+2018-02-11 16:45:50,964 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:50 +08:00
+ 打开了连接
+2018-02-11 16:45:50,965 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:45:50,965 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:50,965 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:45:50 +08:00
+ 执行
+2018-02-11 16:45:50,968 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:45:50,968 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:50,968 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:50 +08:00
+ 关闭了连接
+2018-02-11 16:45:53,174 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:53 +08:00
+ 打开了连接
+2018-02-11 16:45:53,175 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:45:53,175 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:53,175 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:45:53 +08:00
+ 执行
+2018-02-11 16:45:53,176 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:45:53,176 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:53,176 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:53 +08:00
+ 关闭了连接
+2018-02-11 16:45:53,176 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:53 +08:00
+ 打开了连接
+2018-02-11 16:45:53,177 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:45:53,177 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:53,177 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:45:53 +08:00
+ 执行
+2018-02-11 16:45:53,179 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:45:53,180 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:45:53,180 [10] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:45:53 +08:00
+ 关闭了连接
+2018-02-11 16:47:33,364 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:33 +08:00
+ 打开了连接
+2018-02-11 16:47:33,365 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:47:33,365 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:33,365 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:33 +08:00
+ 执行
+2018-02-11 16:47:33,366 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:33,366 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:33,366 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:33 +08:00
+ 关闭了连接
+2018-02-11 16:47:33,366 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:33 +08:00
+ 打开了连接
+2018-02-11 16:47:33,367 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:47:33,367 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:33,367 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:33 +08:00
+ 执行
+2018-02-11 16:47:33,369 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:33,369 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:33,369 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:33 +08:00
+ 关闭了连接
+2018-02-11 16:47:34,305 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:34 +08:00
+ 打开了连接
+2018-02-11 16:47:34,306 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:47:34,306 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:34,306 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:34 +08:00
+ 执行
+2018-02-11 16:47:34,307 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:34,307 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:34,307 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:34 +08:00
+ 关闭了连接
+2018-02-11 16:47:34,307 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:34 +08:00
+ 打开了连接
+2018-02-11 16:47:34,308 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:47:34,308 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:34,308 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:34 +08:00
+ 执行
+2018-02-11 16:47:34,310 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:34,310 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:34,310 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:34 +08:00
+ 关闭了连接
+2018-02-11 16:47:36,122 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:36 +08:00
+ 打开了连接
+2018-02-11 16:47:36,123 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:47:36,123 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:36,123 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:36 +08:00
+ 执行
+2018-02-11 16:47:36,124 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:36,124 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:36,124 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:36 +08:00
+ 关闭了连接
+2018-02-11 16:47:36,125 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:36 +08:00
+ 打开了连接
+2018-02-11 16:47:36,125 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:47:36,125 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:36,125 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:36 +08:00
+ 执行
+2018-02-11 16:47:36,127 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:36,128 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:36,128 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:36 +08:00
+ 关闭了连接
+2018-02-11 16:47:37,140 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:37 +08:00
+ 打开了连接
+2018-02-11 16:47:37,141 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:47:37,141 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:37,141 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:37 +08:00
+ 执行
+2018-02-11 16:47:37,142 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:37,142 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:37,142 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:37 +08:00
+ 关闭了连接
+2018-02-11 16:47:37,142 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:37 +08:00
+ 打开了连接
+2018-02-11 16:47:37,143 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:47:37,143 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:37,143 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:37 +08:00
+ 执行
+2018-02-11 16:47:37,145 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:37,145 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:37,146 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:37 +08:00
+ 关闭了连接
+2018-02-11 16:47:39,384 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:39 +08:00
+ 打开了连接
+2018-02-11 16:47:39,385 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:47:39,385 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:39,385 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:39 +08:00
+ 执行
+2018-02-11 16:47:39,386 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:39,386 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:39,386 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:39 +08:00
+ 关闭了连接
+2018-02-11 16:47:39,386 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:39 +08:00
+ 打开了连接
+2018-02-11 16:47:39,386 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:47:39,386 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:39,386 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:39 +08:00
+ 执行
+2018-02-11 16:47:39,389 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:39,389 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:39,389 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:39 +08:00
+ 关闭了连接
+2018-02-11 16:47:41,265 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:41 +08:00
+ 打开了连接
+2018-02-11 16:47:41,266 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:47:41,266 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:41,266 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:41 +08:00
+ 执行
+2018-02-11 16:47:41,267 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:41,267 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:41,267 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:41 +08:00
+ 关闭了连接
+2018-02-11 16:47:41,267 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:41 +08:00
+ 打开了连接
+2018-02-11 16:47:41,267 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:47:41,267 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:41,267 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:41 +08:00
+ 执行
+2018-02-11 16:47:41,270 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:41,270 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:41,270 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:41 +08:00
+ 关闭了连接
+2018-02-11 16:47:42,024 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:42 +08:00
+ 打开了连接
+2018-02-11 16:47:42,025 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:47:42,025 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:42,025 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:42 +08:00
+ 执行
+2018-02-11 16:47:42,026 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:42,026 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:42,026 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:42 +08:00
+ 关闭了连接
+2018-02-11 16:47:42,026 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:42 +08:00
+ 打开了连接
+2018-02-11 16:47:42,027 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:47:42,027 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:42,027 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:47:42 +08:00
+ 执行
+2018-02-11 16:47:42,029 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:47:42,030 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:47:42,030 [21] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:47:42 +08:00
+ 关闭了连接
+2018-02-11 16:48:28,979 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:28 +08:00
+ 打开了连接
+2018-02-11 16:48:28,979 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:48:28,979 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:28,979 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:48:28 +08:00
+ 执行
+2018-02-11 16:48:28,980 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:48:28,980 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:28,981 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:28 +08:00
+ 关闭了连接
+2018-02-11 16:48:28,981 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:28 +08:00
+ 打开了连接
+2018-02-11 16:48:28,981 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:48:28,981 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:28,981 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:48:28 +08:00
+ 执行
+2018-02-11 16:48:28,984 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:48:28,984 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:28,984 [19] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:28 +08:00
+ 关闭了连接
+2018-02-11 16:48:31,397 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:31 +08:00
+ 打开了连接
+2018-02-11 16:48:31,397 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:48:31,398 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:31,398 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:48:31 +08:00
+ 执行
+2018-02-11 16:48:31,399 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:48:31,399 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:31,399 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:31 +08:00
+ 关闭了连接
+2018-02-11 16:48:31,399 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:31 +08:00
+ 打开了连接
+2018-02-11 16:48:31,399 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:48:31,399 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:31,399 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:48:31 +08:00
+ 执行
+2018-02-11 16:48:31,402 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:48:31,402 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:31,402 [15] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:31 +08:00
+ 关闭了连接
+2018-02-11 16:48:32,550 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:32 +08:00
+ 打开了连接
+2018-02-11 16:48:32,551 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:48:32,551 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:32,551 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:48:32 +08:00
+ 执行
+2018-02-11 16:48:32,552 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:48:32,552 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:32,552 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:32 +08:00
+ 关闭了连接
+2018-02-11 16:48:32,552 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:32 +08:00
+ 打开了连接
+2018-02-11 16:48:32,553 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:48:32,553 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:32,553 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:48:32 +08:00
+ 执行
+2018-02-11 16:48:32,555 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:48:32,555 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:32,556 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:32 +08:00
+ 关闭了连接
+2018-02-11 16:48:43,977 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:43 +08:00
+ 打开了连接
+2018-02-11 16:48:43,977 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 16:48:43,977 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:43,978 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:48:43 +08:00
+ 执行
+2018-02-11 16:48:43,979 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:48:43,979 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:43,979 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:43 +08:00
+ 关闭了连接
+2018-02-11 16:48:43,979 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:43 +08:00
+ 打开了连接
+2018-02-11 16:48:43,979 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 16:48:43,979 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:43,979 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 16:48:43 +08:00
+ 执行
+2018-02-11 16:48:43,982 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 16:48:43,982 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 16:48:43,982 [24] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 16:48:43 +08:00
+ 关闭了连接
+2018-02-11 17:52:13,671 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:52:13 +08:00
+ 打开了连接
+2018-02-11 17:52:13,674 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:52:13,674 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:52:13,675 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:52:13 +08:00
+ 执行
+2018-02-11 17:52:13,676 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:52:13,676 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:52:13,676 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:52:13 +08:00
+ 关闭了连接
+2018-02-11 17:52:13,677 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:52:13 +08:00
+ 打开了连接
+2018-02-11 17:52:13,677 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:52:13,677 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:52:13,677 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:52:13 +08:00
+ 执行
+2018-02-11 17:52:13,680 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:52:13,680 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:52:13,681 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:52:13 +08:00
+ 关闭了连接
+2018-02-11 17:52:48,226 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:52:48 +08:00
+ 打开了连接
+2018-02-11 17:52:48,226 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:52:48,226 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:52:48,226 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:52:48 +08:00
+ 执行
+2018-02-11 17:52:48,227 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:52:48,228 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:52:48,228 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:52:48 +08:00
+ 关闭了连接
+2018-02-11 17:52:48,228 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:52:48 +08:00
+ 打开了连接
+2018-02-11 17:52:48,228 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:52:48,228 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:52:48,228 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:52:48 +08:00
+ 执行
+2018-02-11 17:52:48,230 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:52:48,230 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:52:48,230 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:52:48 +08:00
+ 关闭了连接
+2018-02-11 17:53:38,864 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:53:38 +08:00
+ 打开了连接
+2018-02-11 17:53:38,865 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:53:38,865 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:53:38,865 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:53:38 +08:00
+ 执行
+2018-02-11 17:53:38,866 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:53:38,866 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:53:38,866 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:53:38 +08:00
+ 关闭了连接
+2018-02-11 17:53:38,866 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:53:38 +08:00
+ 打开了连接
+2018-02-11 17:53:38,866 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:53:38,867 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:53:38,867 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:53:38 +08:00
+ 执行
+2018-02-11 17:53:38,869 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:53:38,869 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:53:38,869 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:53:38 +08:00
+ 关闭了连接
+2018-02-11 17:56:13,289 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:56:13 +08:00
+ 打开了连接
+2018-02-11 17:56:13,290 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:56:13,290 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:56:13,290 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:56:13 +08:00
+ 执行
+2018-02-11 17:56:13,291 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:56:13,291 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:56:13,291 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:56:13 +08:00
+ 关闭了连接
+2018-02-11 17:56:13,291 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:56:13 +08:00
+ 打开了连接
+2018-02-11 17:56:13,292 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:56:13,292 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:56:13,292 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:56:13 +08:00
+ 执行
+2018-02-11 17:56:13,293 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:56:13,293 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:56:13,294 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:56:13 +08:00
+ 关闭了连接
+2018-02-11 17:56:50,782 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:56:50 +08:00
+ 打开了连接
+2018-02-11 17:56:50,783 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:56:50,783 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:56:50,783 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:56:50 +08:00
+ 执行
+2018-02-11 17:56:50,784 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:56:50,784 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:56:50,784 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:56:50 +08:00
+ 关闭了连接
+2018-02-11 17:56:50,784 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:56:50 +08:00
+ 打开了连接
+2018-02-11 17:56:50,785 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:56:50,785 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:56:50,785 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:56:50 +08:00
+ 执行
+2018-02-11 17:56:50,786 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:56:50,786 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:56:50,786 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:56:50 +08:00
+ 关闭了连接
+2018-02-11 17:57:02,867 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:02 +08:00
+ 打开了连接
+2018-02-11 17:57:02,867 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:57:02,867 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:02,867 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:02 +08:00
+ 执行
+2018-02-11 17:57:02,868 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:02,868 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:02,868 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:02 +08:00
+ 关闭了连接
+2018-02-11 17:57:02,869 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:02 +08:00
+ 打开了连接
+2018-02-11 17:57:02,869 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:57:02,869 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:02,869 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:02 +08:00
+ 执行
+2018-02-11 17:57:02,871 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:02,871 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:02,871 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:02 +08:00
+ 关闭了连接
+2018-02-11 17:57:03,725 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:03 +08:00
+ 打开了连接
+2018-02-11 17:57:03,725 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:57:03,725 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:03,725 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:03 +08:00
+ 执行
+2018-02-11 17:57:03,726 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:03,726 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:03,726 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:03 +08:00
+ 关闭了连接
+2018-02-11 17:57:03,727 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:03 +08:00
+ 打开了连接
+2018-02-11 17:57:03,727 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:57:03,727 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:03,727 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:03 +08:00
+ 执行
+2018-02-11 17:57:03,730 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:03,730 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:03,730 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:03 +08:00
+ 关闭了连接
+2018-02-11 17:57:05,097 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:05 +08:00
+ 打开了连接
+2018-02-11 17:57:05,098 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:57:05,098 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:05,098 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:05 +08:00
+ 执行
+2018-02-11 17:57:05,099 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:05,099 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:05,099 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:05 +08:00
+ 关闭了连接
+2018-02-11 17:57:05,099 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:05 +08:00
+ 打开了连接
+2018-02-11 17:57:05,100 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:57:05,100 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:05,100 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:05 +08:00
+ 执行
+2018-02-11 17:57:05,102 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:05,102 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:05,102 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:05 +08:00
+ 关闭了连接
+2018-02-11 17:57:05,970 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:05 +08:00
+ 打开了连接
+2018-02-11 17:57:05,971 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:57:05,971 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:05,971 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:05 +08:00
+ 执行
+2018-02-11 17:57:05,972 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:05,972 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:05,972 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:05 +08:00
+ 关闭了连接
+2018-02-11 17:57:05,972 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:05 +08:00
+ 打开了连接
+2018-02-11 17:57:06,006 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:57:06,006 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:06,006 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:06 +08:00
+ 执行
+2018-02-11 17:57:06,009 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:06,009 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:06,009 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:06 +08:00
+ 关闭了连接
+2018-02-11 17:57:09,428 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:09 +08:00
+ 打开了连接
+2018-02-11 17:57:09,429 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:57:09,429 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:09,429 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:09 +08:00
+ 执行
+2018-02-11 17:57:09,430 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:09,430 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:09,430 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:09 +08:00
+ 关闭了连接
+2018-02-11 17:57:09,430 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:09 +08:00
+ 打开了连接
+2018-02-11 17:57:09,431 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:57:09,431 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:09,431 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:09 +08:00
+ 执行
+2018-02-11 17:57:09,433 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:09,433 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:09,433 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:09 +08:00
+ 关闭了连接
+2018-02-11 17:57:16,066 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:16 +08:00
+ 打开了连接
+2018-02-11 17:57:16,067 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:57:16,067 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:16,067 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:16 +08:00
+ 执行
+2018-02-11 17:57:16,068 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:16,068 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:16,068 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:16 +08:00
+ 关闭了连接
+2018-02-11 17:57:16,068 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:16 +08:00
+ 打开了连接
+2018-02-11 17:57:16,069 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:57:16,069 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:16,069 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:16 +08:00
+ 执行
+2018-02-11 17:57:16,071 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:16,071 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:16,071 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:16 +08:00
+ 关闭了连接
+2018-02-11 17:57:17,687 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:17 +08:00
+ 打开了连接
+2018-02-11 17:57:17,688 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:57:17,688 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:17,688 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:17 +08:00
+ 执行
+2018-02-11 17:57:17,689 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:17,689 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:17,689 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:17 +08:00
+ 关闭了连接
+2018-02-11 17:57:17,689 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:17 +08:00
+ 打开了连接
+2018-02-11 17:57:17,690 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:57:17,690 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:17,690 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:17 +08:00
+ 执行
+2018-02-11 17:57:17,692 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:17,692 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:17,692 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:17 +08:00
+ 关闭了连接
+2018-02-11 17:57:19,733 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:19 +08:00
+ 打开了连接
+2018-02-11 17:57:19,734 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:57:19,734 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:19,734 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:19 +08:00
+ 执行
+2018-02-11 17:57:19,735 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:19,735 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:19,735 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:19 +08:00
+ 关闭了连接
+2018-02-11 17:57:19,735 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:19 +08:00
+ 打开了连接
+2018-02-11 17:57:19,736 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:57:19,736 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:19,736 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:19 +08:00
+ 执行
+2018-02-11 17:57:19,737 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:19,737 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:19,738 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:19 +08:00
+ 关闭了连接
+2018-02-11 17:57:21,998 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:21 +08:00
+ 打开了连接
+2018-02-11 17:57:21,998 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:57:21,998 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:21,999 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:21 +08:00
+ 执行
+2018-02-11 17:57:22,000 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:22,000 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:22,000 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:22 +08:00
+ 关闭了连接
+2018-02-11 17:57:22,000 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:22 +08:00
+ 打开了连接
+2018-02-11 17:57:22,000 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:57:22,000 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:22,001 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:22 +08:00
+ 执行
+2018-02-11 17:57:22,002 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:22,002 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:22,003 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:22 +08:00
+ 关闭了连接
+2018-02-11 17:57:23,432 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:23 +08:00
+ 打开了连接
+2018-02-11 17:57:23,432 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:57:23,432 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:23,432 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:23 +08:00
+ 执行
+2018-02-11 17:57:23,433 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:23,433 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:23,434 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:23 +08:00
+ 关闭了连接
+2018-02-11 17:57:23,434 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:23 +08:00
+ 打开了连接
+2018-02-11 17:57:23,434 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:57:23,434 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:23,434 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:23 +08:00
+ 执行
+2018-02-11 17:57:23,436 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:23,436 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:23,436 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:23 +08:00
+ 关闭了连接
+2018-02-11 17:57:24,334 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:24 +08:00
+ 打开了连接
+2018-02-11 17:57:24,335 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:57:24,335 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:24,335 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:24 +08:00
+ 执行
+2018-02-11 17:57:24,336 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:24,336 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:24,336 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:24 +08:00
+ 关闭了连接
+2018-02-11 17:57:24,336 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:24 +08:00
+ 打开了连接
+2018-02-11 17:57:24,337 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:57:24,337 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:24,337 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:24 +08:00
+ 执行
+2018-02-11 17:57:24,339 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:24,339 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:24,339 [77] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:24 +08:00
+ 关闭了连接
+2018-02-11 17:57:27,317 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:27 +08:00
+ 打开了连接
+2018-02-11 17:57:27,317 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:57:27,317 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:27,318 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:27 +08:00
+ 执行
+2018-02-11 17:57:27,319 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:27,319 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:27,319 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:27 +08:00
+ 关闭了连接
+2018-02-11 17:57:27,319 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:27 +08:00
+ 打开了连接
+2018-02-11 17:57:27,320 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:57:27,320 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:27,320 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:27 +08:00
+ 执行
+2018-02-11 17:57:27,321 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:27,321 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:27,322 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:27 +08:00
+ 关闭了连接
+2018-02-11 17:57:28,437 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:28 +08:00
+ 打开了连接
+2018-02-11 17:57:28,437 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:57:28,437 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:28,438 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:28 +08:00
+ 执行
+2018-02-11 17:57:28,439 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:28,439 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:28,439 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:28 +08:00
+ 关闭了连接
+2018-02-11 17:57:28,439 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:28 +08:00
+ 打开了连接
+2018-02-11 17:57:28,440 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:57:28,440 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:28,440 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:57:28 +08:00
+ 执行
+2018-02-11 17:57:28,441 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:57:28,441 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:57:28,442 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:57:28 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,750 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,765 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[ID] AS [ID], 
+    [Extent1].[TypeID] AS [TypeID], 
+    [Extent1].[URL] AS [URL], 
+    [Extent1].[MenuName] AS [MenuName], 
+    [Extent1].[ParentID] AS [ParentID], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateTime] AS [CreateTime]
+    FROM [dbo].[tb_Power] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND (0 = [Extent1].[ParentID])
+2018-02-11 17:58:11,765 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,765 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,768 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,768 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,770 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,776 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,806 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[tb_Power] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-02-11 17:58:11,806 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,806 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,806 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,808 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,808 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,811 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,812 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,813 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[ID] AS [ID], 
+    [Extent1].[TypeID] AS [TypeID], 
+    [Extent1].[URL] AS [URL], 
+    [Extent1].[MenuName] AS [MenuName], 
+    [Extent1].[ParentID] AS [ParentID], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateTime] AS [CreateTime]
+    FROM [dbo].[tb_Power] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+2018-02-11 17:58:11,813 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,813 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,813 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,815 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,816 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,816 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,817 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,817 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[tb_Power] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-02-11 17:58:11,817 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,817 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,817 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,818 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,818 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,819 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,819 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,820 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[ID] AS [ID], 
+    [Extent1].[TypeID] AS [TypeID], 
+    [Extent1].[URL] AS [URL], 
+    [Extent1].[MenuName] AS [MenuName], 
+    [Extent1].[ParentID] AS [ParentID], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateTime] AS [CreateTime]
+    FROM [dbo].[tb_Power] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+2018-02-11 17:58:11,820 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,820 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,820 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,821 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,821 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,822 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,822 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,823 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[tb_Power] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-02-11 17:58:11,823 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,823 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,823 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,824 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,824 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,824 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,824 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,825 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[ID] AS [ID], 
+    [Extent1].[TypeID] AS [TypeID], 
+    [Extent1].[URL] AS [URL], 
+    [Extent1].[MenuName] AS [MenuName], 
+    [Extent1].[ParentID] AS [ParentID], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateTime] AS [CreateTime]
+    FROM [dbo].[tb_Power] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+2018-02-11 17:58:11,825 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,825 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,825 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,826 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,826 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,826 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,827 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,827 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[tb_Power] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-02-11 17:58:11,827 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,827 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,827 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,828 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,828 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,828 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,829 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,829 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[ID] AS [ID], 
+    [Extent1].[TypeID] AS [TypeID], 
+    [Extent1].[URL] AS [URL], 
+    [Extent1].[MenuName] AS [MenuName], 
+    [Extent1].[ParentID] AS [ParentID], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateTime] AS [CreateTime]
+    FROM [dbo].[tb_Power] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+2018-02-11 17:58:11,829 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,829 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,829 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,831 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,831 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,831 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,831 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,832 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[tb_Power] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-02-11 17:58:11,832 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,832 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '3' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,832 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,834 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,834 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,834 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,834 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,835 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[ID] AS [ID], 
+    [Extent1].[TypeID] AS [TypeID], 
+    [Extent1].[URL] AS [URL], 
+    [Extent1].[MenuName] AS [MenuName], 
+    [Extent1].[ParentID] AS [ParentID], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateTime] AS [CreateTime]
+    FROM [dbo].[tb_Power] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+2018-02-11 17:58:11,835 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,835 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '3' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,835 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,836 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,836 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,836 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,837 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,837 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[tb_Power] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-02-11 17:58:11,838 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,838 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '3' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,838 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,839 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,839 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,839 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,839 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,840 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[ID] AS [ID], 
+    [Extent1].[TypeID] AS [TypeID], 
+    [Extent1].[URL] AS [URL], 
+    [Extent1].[MenuName] AS [MenuName], 
+    [Extent1].[ParentID] AS [ParentID], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateTime] AS [CreateTime]
+    FROM [dbo].[tb_Power] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+2018-02-11 17:58:11,840 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,840 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '3' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,840 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,842 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,842 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,842 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,842 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,843 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[tb_Power] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-02-11 17:58:11,843 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,843 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '4' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,843 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,844 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,844 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,844 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,844 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,844 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[ID] AS [ID], 
+    [Extent1].[TypeID] AS [TypeID], 
+    [Extent1].[URL] AS [URL], 
+    [Extent1].[MenuName] AS [MenuName], 
+    [Extent1].[ParentID] AS [ParentID], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateTime] AS [CreateTime]
+    FROM [dbo].[tb_Power] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+2018-02-11 17:58:11,844 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,844 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '4' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,844 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,846 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,846 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,846 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,846 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,847 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[tb_Power] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-02-11 17:58:11,847 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,847 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '4' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,847 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,848 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,848 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,848 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,849 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,849 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[ID] AS [ID], 
+    [Extent1].[TypeID] AS [TypeID], 
+    [Extent1].[URL] AS [URL], 
+    [Extent1].[MenuName] AS [MenuName], 
+    [Extent1].[ParentID] AS [ParentID], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateTime] AS [CreateTime]
+    FROM [dbo].[tb_Power] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+2018-02-11 17:58:11,849 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,849 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '4' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,849 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,851 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,851 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,851 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,851 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,852 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[tb_Power] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-02-11 17:58:11,852 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,852 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '5' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,852 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,853 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,853 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,853 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,853 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,854 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[ID] AS [ID], 
+    [Extent1].[TypeID] AS [TypeID], 
+    [Extent1].[URL] AS [URL], 
+    [Extent1].[MenuName] AS [MenuName], 
+    [Extent1].[ParentID] AS [ParentID], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateTime] AS [CreateTime]
+    FROM [dbo].[tb_Power] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+2018-02-11 17:58:11,854 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,854 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '5' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,854 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,856 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,856 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,856 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,856 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,857 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[tb_Power] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-02-11 17:58:11,857 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,857 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '5' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,857 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,858 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,858 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,858 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,858 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,859 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[ID] AS [ID], 
+    [Extent1].[TypeID] AS [TypeID], 
+    [Extent1].[URL] AS [URL], 
+    [Extent1].[MenuName] AS [MenuName], 
+    [Extent1].[ParentID] AS [ParentID], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateTime] AS [CreateTime]
+    FROM [dbo].[tb_Power] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+2018-02-11 17:58:11,859 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,859 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '5' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,859 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,860 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,860 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,860 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,860 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,861 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[tb_Power] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-02-11 17:58:11,861 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,861 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '6' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,861 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,862 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,862 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,862 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,862 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,863 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[ID] AS [ID], 
+    [Extent1].[TypeID] AS [TypeID], 
+    [Extent1].[URL] AS [URL], 
+    [Extent1].[MenuName] AS [MenuName], 
+    [Extent1].[ParentID] AS [ParentID], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateTime] AS [CreateTime]
+    FROM [dbo].[tb_Power] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+2018-02-11 17:58:11,863 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,863 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '6' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,863 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,864 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,864 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,864 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,865 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,865 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [dbo].[tb_Power] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2018-02-11 17:58:11,865 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,865 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '6' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,865 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,866 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,866 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,866 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:11,867 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 打开了连接
+2018-02-11 17:58:11,867 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[ID] AS [ID], 
+    [Extent1].[TypeID] AS [TypeID], 
+    [Extent1].[URL] AS [URL], 
+    [Extent1].[MenuName] AS [MenuName], 
+    [Extent1].[ParentID] AS [ParentID], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateTime] AS [CreateTime]
+    FROM [dbo].[tb_Power] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[ParentID] = @p__linq__0)
+2018-02-11 17:58:11,867 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,867 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: '6' (Type = Int32, IsNullable = false)
+
+2018-02-11 17:58:11,867 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:11 +08:00
+ 执行
+2018-02-11 17:58:11,869 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:11,869 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:11,869 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:11 +08:00
+ 关闭了连接
+2018-02-11 17:58:20,133 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:20 +08:00
+ 打开了连接
+2018-02-11 17:58:20,133 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:58:20,133 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:20,133 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:20 +08:00
+ 执行
+2018-02-11 17:58:20,134 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:20,134 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:20,134 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:20 +08:00
+ 关闭了连接
+2018-02-11 17:58:20,135 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:20 +08:00
+ 打开了连接
+2018-02-11 17:58:20,135 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:58:20,135 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:20,135 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:20 +08:00
+ 执行
+2018-02-11 17:58:20,137 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:20,137 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:20,137 [79] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:20 +08:00
+ 关闭了连接
+2018-02-11 17:58:31,078 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:31 +08:00
+ 打开了连接
+2018-02-11 17:58:31,078 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:58:31,078 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:31,078 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:31 +08:00
+ 执行
+2018-02-11 17:58:31,079 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:31,079 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:31,079 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:31 +08:00
+ 关闭了连接
+2018-02-11 17:58:31,079 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:31 +08:00
+ 打开了连接
+2018-02-11 17:58:31,080 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:58:31,080 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:31,080 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:31 +08:00
+ 执行
+2018-02-11 17:58:31,082 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:31,082 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:31,082 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:31 +08:00
+ 关闭了连接
+2018-02-11 17:58:32,235 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:32 +08:00
+ 打开了连接
+2018-02-11 17:58:32,235 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:58:32,235 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:32,235 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:32 +08:00
+ 执行
+2018-02-11 17:58:32,236 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:32,236 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:32,237 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:32 +08:00
+ 关闭了连接
+2018-02-11 17:58:32,237 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:32 +08:00
+ 打开了连接
+2018-02-11 17:58:32,237 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:58:32,237 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:32,237 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:32 +08:00
+ 执行
+2018-02-11 17:58:32,239 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:32,239 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:32,239 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:32 +08:00
+ 关闭了连接
+2018-02-11 17:58:33,247 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:33 +08:00
+ 打开了连接
+2018-02-11 17:58:33,248 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 17:58:33,248 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:33,248 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:33 +08:00
+ 执行
+2018-02-11 17:58:33,249 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:33,249 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:33,249 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:33 +08:00
+ 关闭了连接
+2018-02-11 17:58:33,249 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:33 +08:00
+ 打开了连接
+2018-02-11 17:58:33,249 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 17:58:33,249 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:33,250 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 17:58:33 +08:00
+ 执行
+2018-02-11 17:58:33,251 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 17:58:33,251 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 17:58:33,251 [82] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 17:58:33 +08:00
+ 关闭了连接
+2018-02-11 18:06:43,394 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:43 +08:00
+ 打开了连接
+2018-02-11 18:06:43,395 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 18:06:43,395 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:43,395 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:43 +08:00
+ 执行
+2018-02-11 18:06:43,396 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:43,396 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:43,396 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:43 +08:00
+ 关闭了连接
+2018-02-11 18:06:43,396 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:43 +08:00
+ 打开了连接
+2018-02-11 18:06:43,396 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 18:06:43,396 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:43,396 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:43 +08:00
+ 执行
+2018-02-11 18:06:43,399 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:43,399 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:43,399 [81] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:43 +08:00
+ 关闭了连接
+2018-02-11 18:06:44,506 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:44 +08:00
+ 打开了连接
+2018-02-11 18:06:44,506 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 18:06:44,506 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:44,506 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:44 +08:00
+ 执行
+2018-02-11 18:06:44,507 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:44,507 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:44,507 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:44 +08:00
+ 关闭了连接
+2018-02-11 18:06:44,507 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:44 +08:00
+ 打开了连接
+2018-02-11 18:06:44,508 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 18:06:44,508 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:44,508 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:44 +08:00
+ 执行
+2018-02-11 18:06:44,510 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:44,510 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:44,510 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:44 +08:00
+ 关闭了连接
+2018-02-11 18:06:45,691 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:45 +08:00
+ 打开了连接
+2018-02-11 18:06:45,692 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 18:06:45,692 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:45,692 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:45 +08:00
+ 执行
+2018-02-11 18:06:45,693 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:45,693 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:45,693 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:45 +08:00
+ 关闭了连接
+2018-02-11 18:06:45,694 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:45 +08:00
+ 打开了连接
+2018-02-11 18:06:45,694 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 18:06:45,694 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:45,694 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:45 +08:00
+ 执行
+2018-02-11 18:06:45,697 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:45,697 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:45,697 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:45 +08:00
+ 关闭了连接
+2018-02-11 18:06:47,108 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:47 +08:00
+ 打开了连接
+2018-02-11 18:06:47,109 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 18:06:47,109 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:47,109 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:47 +08:00
+ 执行
+2018-02-11 18:06:47,110 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:47,110 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:47,110 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:47 +08:00
+ 关闭了连接
+2018-02-11 18:06:47,110 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:47 +08:00
+ 打开了连接
+2018-02-11 18:06:47,111 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 18:06:47,111 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:47,111 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:47 +08:00
+ 执行
+2018-02-11 18:06:47,113 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:47,113 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:47,113 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:47 +08:00
+ 关闭了连接
+2018-02-11 18:06:48,877 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:48 +08:00
+ 打开了连接
+2018-02-11 18:06:48,877 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 18:06:48,877 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:48,877 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:48 +08:00
+ 执行
+2018-02-11 18:06:48,878 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:48,878 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:48,878 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:48 +08:00
+ 关闭了连接
+2018-02-11 18:06:48,879 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:48 +08:00
+ 打开了连接
+2018-02-11 18:06:48,879 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 18:06:48,879 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:48,879 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:48 +08:00
+ 执行
+2018-02-11 18:06:48,881 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:48,881 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:48,881 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:48 +08:00
+ 关闭了连接
+2018-02-11 18:06:50,459 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:50 +08:00
+ 打开了连接
+2018-02-11 18:06:50,459 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 18:06:50,459 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:50,459 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:50 +08:00
+ 执行
+2018-02-11 18:06:50,460 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:50,460 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:50,460 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:50 +08:00
+ 关闭了连接
+2018-02-11 18:06:50,461 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:50 +08:00
+ 打开了连接
+2018-02-11 18:06:50,461 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 18:06:50,461 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:50,461 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:50 +08:00
+ 执行
+2018-02-11 18:06:50,464 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 2 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:50,464 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:50,464 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:50 +08:00
+ 关闭了连接
+2018-02-11 18:06:54,789 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:54 +08:00
+ 打开了连接
+2018-02-11 18:06:54,790 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 18:06:54,790 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:54,790 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:54 +08:00
+ 执行
+2018-02-11 18:06:54,791 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:54,791 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:54,792 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:54 +08:00
+ 关闭了连接
+2018-02-11 18:06:54,792 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:54 +08:00
+ 打开了连接
+2018-02-11 18:06:54,792 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 18:06:54,792 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:54,792 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:54 +08:00
+ 执行
+2018-02-11 18:06:54,794 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:54,794 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:54,795 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:54 +08:00
+ 关闭了连接
+2018-02-11 18:06:55,797 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:55 +08:00
+ 打开了连接
+2018-02-11 18:06:55,798 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 18:06:55,798 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:55,798 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:55 +08:00
+ 执行
+2018-02-11 18:06:55,799 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:55,799 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:55,799 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:55 +08:00
+ 关闭了连接
+2018-02-11 18:06:55,799 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:55 +08:00
+ 打开了连接
+2018-02-11 18:06:55,800 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 18:06:55,800 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:55,800 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:55 +08:00
+ 执行
+2018-02-11 18:06:55,802 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:55,802 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:55,802 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:55 +08:00
+ 关闭了连接
+2018-02-11 18:06:58,014 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:58 +08:00
+ 打开了连接
+2018-02-11 18:06:58,015 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 18:06:58,015 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:58,015 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:58 +08:00
+ 执行
+2018-02-11 18:06:58,016 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:58,016 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:58,016 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:58 +08:00
+ 关闭了连接
+2018-02-11 18:06:58,016 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:58 +08:00
+ 打开了连接
+2018-02-11 18:06:58,017 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 3
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 18:06:58,017 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:58,017 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:58 +08:00
+ 执行
+2018-02-11 18:06:58,020 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:58,020 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:58,020 [74] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:58 +08:00
+ 关闭了连接
+2018-02-11 18:06:59,325 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:59 +08:00
+ 打开了连接
+2018-02-11 18:06:59,325 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 18:06:59,325 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:59,325 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:59 +08:00
+ 执行
+2018-02-11 18:06:59,326 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:59,326 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:59,326 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:59 +08:00
+ 关闭了连接
+2018-02-11 18:06:59,327 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:59 +08:00
+ 打开了连接
+2018-02-11 18:06:59,327 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 18:06:59,327 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:59,327 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:06:59 +08:00
+ 执行
+2018-02-11 18:06:59,329 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:06:59,329 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:06:59,329 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:06:59 +08:00
+ 关闭了连接
+2018-02-11 18:07:02,902 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:07:02 +08:00
+ 打开了连接
+2018-02-11 18:07:02,902 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 18:07:02,902 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:07:02,902 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:07:02 +08:00
+ 执行
+2018-02-11 18:07:02,903 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:07:02,904 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:07:02,904 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:07:02 +08:00
+ 关闭了连接
+2018-02-11 18:07:02,904 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:07:02 +08:00
+ 打开了连接
+2018-02-11 18:07:02,904 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 6
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 18:07:02,904 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:07:02,904 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:07:02 +08:00
+ 执行
+2018-02-11 18:07:02,906 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:07:02,906 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:07:02,906 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:07:02 +08:00
+ 关闭了连接
+2018-02-11 18:07:12,992 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:07:12 +08:00
+ 打开了连接
+2018-02-11 18:07:12,993 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [GroupBy1]
+2018-02-11 18:07:12,993 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:07:12,993 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:07:12 +08:00
+ 执行
+2018-02-11 18:07:12,994 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 0 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:07:12,994 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:07:12,994 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:07:12 +08:00
+ 关闭了连接
+2018-02-11 18:07:12,994 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:07:12 +08:00
+ 打开了连接
+2018-02-11 18:07:12,995 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (3) 
+    [Filter1].[ID] AS [ID], 
+    [Filter1].[UserName] AS [UserName], 
+    [Filter1].[TrueName] AS [TrueName], 
+    [Filter1].[Password] AS [Password], 
+    [Filter1].[SecondPassword] AS [SecondPassword], 
+    [Filter1].[ThirdPassword] AS [ThirdPassword], 
+    [Filter1].[FourPassword] AS [FourPassword], 
+    [Filter1].[IsDeleted] AS [IsDeleted], 
+    [Filter1].[CreateTime] AS [CreateTime]
+    FROM ( SELECT [Extent1].[ID] AS [ID], [Extent1].[UserName] AS [UserName], [Extent1].[TrueName] AS [TrueName], [Extent1].[Password] AS [Password], [Extent1].[SecondPassword] AS [SecondPassword], [Extent1].[ThirdPassword] AS [ThirdPassword], [Extent1].[FourPassword] AS [FourPassword], [Extent1].[IsDeleted] AS [IsDeleted], [Extent1].[CreateTime] AS [CreateTime], row_number() OVER (ORDER BY [Extent1].[CreateTime] DESC) AS [row_number]
+        FROM [dbo].[tb_Admin] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND (N'admin' <> [Extent1].[UserName])
+    )  AS [Filter1]
+    WHERE [Filter1].[row_number] > 0
+    ORDER BY [Filter1].[CreateTime] DESC
+2018-02-11 18:07:12,995 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:07:12,995 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 正在 2018/2/11 18:07:12 +08:00
+ 执行
+2018-02-11 18:07:12,997 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- 已在 1 毫秒内完成，结果为: SqlDataReader
+
+2018-02-11 18:07:12,997 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2018-02-11 18:07:12,997 [71] DEBUG Chat.Service.MyDbContext - EF执行SQL：已于 2018/2/11 18:07:12 +08:00
+ 关闭了连接

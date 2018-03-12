@@ -1,0 +1,42 @@
+﻿@model Chat.FrontWeb.Areas.Admin.Models.Agent.AgentListViewModel
+<div class="dataTable">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="t1">
+        <thead>
+            <tr>
+                <th>会员编号</th>
+                <th>开通日期</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="pagerList">
+            @foreach (var user in Model.AgentListDTO)
+            {
+                <tr>
+
+                    <td align="center">@user.AgentCode</td>
+                    <td align="center">@user.OpenTime</td>
+                    <td align="center">
+                        <a></a>
+                        @{if (user.Flag == 1)
+                            {
+                                <button class="easyui-linkbutton open" value="@user.ID" iconcls="icon-remove">解冻账户</button>
+                            }
+                        }
+                        @{if (user.Flag == 0)
+                            {
+                                <button class="easyui-linkbutton close" value="@user.ID" iconcls="icon-edit">冻结账户</button>
+                            }
+                        }
+                        @*<button class="easyui-linkbutton pass" value="@user.UserID" iconcls="icon-edit">激活</button>*@
+                        @*<a href="/admin/member/Pass?id=@user.ID"></a>*@
+                        @*<button class="easyui-linkbutton del" value="@user.UserID" iconcls="icon-remove">删除</button>*@
+                        @*<a href="/admin/member/Del?id=@user.ID"></a>*@
+                    </td>
+                </tr>
+                            }
+        </tbody>
+        <tr id="trNull" hidden="hidden">
+            <td colspan="4" align="center"><div class="NoData"><span class="cBlack"> <img src="/Areas/Admin/Content/Images/ico_NoDate.gif" width="16" height="16" /> 抱歉！目前数据库暂无数据。</span></div></td>
+        </tr>
+    </table>
+</div>

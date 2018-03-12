@@ -1,0 +1,5 @@
+F:\1801\CodeFirstDemo\Chat.DTO\bin\Debug\Chat.DTO.dll
+F:\1801\CodeFirstDemo\Chat.DTO\bin\Debug\Chat.DTO.pdb
+F:\1801\CodeFirstDemo\Chat.DTO\obj\Debug\Chat.DTO.dll
+F:\1801\CodeFirstDemo\Chat.DTO\obj\Debug\Chat.DTO.pdb
+F:\1801\CodeFirstDemo\Chat.DTO\obj\Debug\Chat.DTO.csprojResolveAssemblyReference.cache

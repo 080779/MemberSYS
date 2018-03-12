@@ -1,0 +1,9 @@
+F:\1801\CodeFirstDemo\Chat.IService\bin\Debug\Chat.IService.dll
+F:\1801\CodeFirstDemo\Chat.IService\bin\Debug\Chat.IService.pdb
+F:\1801\CodeFirstDemo\Chat.IService\bin\Debug\Chat.DTO.dll
+F:\1801\CodeFirstDemo\Chat.IService\bin\Debug\Chat.DTO.pdb
+F:\1801\CodeFirstDemo\Chat.IService\obj\Debug\Chat.IService.csprojResolveAssemblyReference.cache
+F:\1801\CodeFirstDemo\Chat.IService\obj\Debug\Chat.IService.dll
+F:\1801\CodeFirstDemo\Chat.IService\obj\Debug\Chat.IService.pdb
+F:\1801\CodeFirstDemo\Chat.IService\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+F:\1801\CodeFirstDemo\Chat.IService\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll

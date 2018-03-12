@@ -1,0 +1,16 @@
+F:\1801\CodeFirstDemo\Chat.WebCommon\bin\Debug\Chat.WebCommon.dll
+F:\1801\CodeFirstDemo\Chat.WebCommon\bin\Debug\Chat.WebCommon.pdb
+F:\1801\CodeFirstDemo\Chat.WebCommon\bin\Debug\ICSharpCode.SharpZipLib.dll
+F:\1801\CodeFirstDemo\Chat.WebCommon\bin\Debug\Newtonsoft.Json.dll
+F:\1801\CodeFirstDemo\Chat.WebCommon\bin\Debug\NPOI.dll
+F:\1801\CodeFirstDemo\Chat.WebCommon\bin\Debug\NPOI.OOXML.dll
+F:\1801\CodeFirstDemo\Chat.WebCommon\bin\Debug\NPOI.OpenXml4Net.dll
+F:\1801\CodeFirstDemo\Chat.WebCommon\bin\Debug\NPOI.OpenXmlFormats.dll
+F:\1801\CodeFirstDemo\Chat.WebCommon\bin\Debug\System.Web.Mvc.dll
+F:\1801\CodeFirstDemo\Chat.WebCommon\bin\Debug\Newtonsoft.Json.xml
+F:\1801\CodeFirstDemo\Chat.WebCommon\bin\Debug\NPOI.xml
+F:\1801\CodeFirstDemo\Chat.WebCommon\bin\Debug\System.Web.Mvc.xml
+F:\1801\CodeFirstDemo\Chat.WebCommon\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+F:\1801\CodeFirstDemo\Chat.WebCommon\obj\Debug\Chat.WebCommon.dll
+F:\1801\CodeFirstDemo\Chat.WebCommon\obj\Debug\Chat.WebCommon.pdb
+F:\1801\CodeFirstDemo\Chat.WebCommon\obj\Debug\Chat.WebCommon.csprojResolveAssemblyReference.cache
